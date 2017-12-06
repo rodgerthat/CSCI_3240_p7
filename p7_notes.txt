@@ -1,0 +1,93 @@
+P7 DUE DEC 6 ( NEXT WED ) ( LAST CLASS DAY )
+--------------------------------------------------------------------------------
+
+p7 will be small, 
+
+we will be given skeleton code to fill in . 
+
+HUZZA!
+
+
+last project will be related to signals 
+in some way, shape or form. 
+
+
+project will probably include zombies
+
+
+ssoooo whut is a zombie process?
+
+---------------------------------------------------------------------------------
+
+wait system call. 
+
+int wait(int *child_status)
+
+- just waits for any process to terminate. 
+- once completes, you have to query which one actually finished, based on return call from wait 
+
+vs. waitpid ( wait on specific process ) 
+- waitpid does not have to wait hanging. 
+- if terminates, did it rly term cuz child termed 
+- or did it term cuz you told it not to hand. 
+- 
+
+wait will be sufficiant for our proj. 
+
+check out man wait
+
+check out macros defined in wait.h
+
+consult slides for examples, 
+
+--------------------------------------------------------------------------------
+
+check sigdemo.c
+
+a signal is an asyncronous event. 
+must be prepped to deal w it. 
+lines 5 ~ 8 handle a signal / async event. 
+
+15 ~ 17 setup specific signal handler handoffs. 
+
+signal is used to set up a signal handler
+
+kill is used to send a signal. 
+man kill
+man 2 kill  // system call
+
+// kill -l will list signals known
+
+kill -9 1
+kill -KILL 1
+
+line 18, you cannot handle that type of signal. 
+
+line 17 i do care i want to receive child signals and handle them. 
+
+line 17 i do care i want to receive child signals and handle them. 
+
+./sigdemo
+
+lol the parent goes into an infinite loop. 
+needs alarming
+
+//
+
+no env vars, 
+P7RC
+or 
+P7ABEND
+
+if no env vars set, 
+
+env | grep P7
+
+// should retrn w/ STAT 0, 
+
+exits w/ 0 ret code. 
+
+
+
+
+
